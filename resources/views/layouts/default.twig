@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html>
+
+{% include "theme::partials/metadata" %}
+
+<body>
+
+<!-- Wrapper -->
+<div id="wrapper">
+
+    {% set pages = entries('pages')
+    .whereParentId(null)
+    .whereEnabled(true)
+    .get() %}
+
+    {% include "theme::partials/header" %}
+    {% include "theme::partials/main" %}
+    {% include "theme::partials/footer" %}
+
+</div>
+
+<!-- BG -->
+<div id="bg"></div>
+
+<!-- Scripts -->
+<script src="{{ asset_path('theme::js/jquery.min.js') }}"></script>
+<script src="{{ asset_path('theme::js/skel.min.js') }}"></script>
+<script src="{{ asset_path('theme::js/util.js') }}"></script>
+<script src="{{ asset_path('theme::js/main.js') }}"></script>
+
+</body>
+</html>

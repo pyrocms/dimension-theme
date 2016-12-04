@@ -1,0 +1,9 @@
+{
+    "name": "pyrocms/dimension-theme",
+    "type": "streams-addon",
+    "autoload": {
+        "psr-4": {
+            "Pyrocms\\DimensionTheme\\": "src/"
+        }
+    }
+}

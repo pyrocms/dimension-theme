@@ -1,0 +1,19 @@
+<!-- Main -->
+<div id="main">
+
+    {% for page in pages %}
+        <article id="{{ page.slug }}">
+
+            <h2 class="major">{{ page.title }}</h2>
+
+            <span class="image main">
+                {# Might want to tie an image field to this #}
+                <img src="{{ image_path('theme::images/pic01.jpg') }}" alt=""/>
+            </span>
+
+            {{ page.content|raw }}
+
+        </article>
+    {% endfor %}
+
+</div>
